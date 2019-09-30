@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[和宝宝的生活活.md]]></title>
+    <url>%2F2019%2F%E5%92%8C%E5%AE%9D%E5%AE%9D%E7%9A%84%E7%94%9F%E6%B4%BB%E6%B4%BB%2F</url>
+    <content type="text"><![CDATA[第一天和宝宝见面2019年6月29号 宝宝回去之后发了豆瓣： 坐在很小的日式餐馆里，你在我左旁，我无意望着你，你也看向我，我的嘴角止不住上扬，你也笑了起来，加上很热的我感受着空调以及风扇从你那边吹过来的一阵凉风，我知道，那是心动的感觉。（昨日）]]></content>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[前端学习方法]]></title>
-    <url>%2F2019%2F10%2F01%2F%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[学习笔记 推荐使用Markdown语法 学习成本低 任何文本编辑器都可以打开 专注于撰写内容 效率高 兼容 HTML 笔记形式：记录你学习的内容，点滴 一周交一次 推荐学习网站####网站 MDN w3cplus 网易云课堂 慕课网 ####大神博客 张鑫旭 阮一峰 廖雪峰 汤姆大叔 ####博客网站 CSDN segmentfault 掘金 简书 入门书籍 《css权威指南》 《JavaScript DOM 编程艺术》 《JavaScript高级程序设计》 git, github码云]]></content>
+    <url>%2F2019%2F%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[学习笔记 推荐使用Markdown语法 学习成本低 任何文本编辑器都可以打开 专注于撰写内容 效率高 兼容 HTML 笔记形式：记录你学习的内容，点滴 一周交一次 推荐学习网站####网站 MDN w3cplus 网易云课堂 慕课网 ####大神博客 张鑫旭 阮一峰 廖雪峰 汤姆大叔 ####博客网站 CSDN segmentfault 掘金 简书 入门书籍 《css权威指南》 《JavaScript DOM 编程艺术》 《JavaScript高级程序设计》 git, github]]></content>
       <tags>
         <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F07%2F10%2Fhello-world%2F</url>
+    <url>%2F2019%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
