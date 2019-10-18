@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="小狮子LittleLion">
 <meta property="og:description" content="5.1 Object类型1. 对象属性访问一般来说，对象属性访问都是点表示法。 还一种方法，方括号表示法 []。 1person.name = person[&apos;name&apos;]  当属性名还有空格时，或者使用字符串变量时，方括号表示法有大作用。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-16T18:24:34.008Z">
+<meta property="og:updated_time" content="2019-10-18T07:21:20.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组Array方法总结">
 <meta name="twitter:description" content="5.1 Object类型1. 对象属性访问一般来说，对象属性访问都是点表示法。 还一种方法，方括号表示法 []。 1person.name = person[&apos;name&apos;]  当属性名还有空格时，或者使用字符串变量时，方括号表示法有大作用。">
@@ -259,11 +259,19 @@
                 
               
 
-              <time title="创建时间：2019-10-17 02:16:19 / 修改时间：02:24:34" itemprop="dateCreated datePublished" datetime="2019-10-17T02:16:19+08:00">2019-10-17</time>
+              <time title="创建时间：2019-10-17 02:16:19" itemprop="dateCreated datePublished" datetime="2019-10-17T02:16:19+08:00">2019-10-17</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-18 15:21:20" itemprop="dateModified" datetime="2019-10-18T15:21:20+08:00">2019-10-18</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -315,8 +323,7 @@
 
 </li>
 </ol>
-<p>####2. length属性</p>
-<p>数组的length属性不是只读的，他还是可写的。</p>
+<h4 id="2-length属性"><a href="#2-length属性" class="headerlink" title="2. length属性"></a>2. length属性</h4><p>数组的length属性不是只读的，他还是可写的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">'red'</span>,<span class="string">'blue'</span>,<span class="string">'green'</span>];</span><br><span class="line">colors.length = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(color[<span class="number">2</span>]); <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
 
 <p>将length属性手动设置为比数组小时，越界的项会变成undefined。</p>
@@ -458,8 +465,7 @@
 <li>第一次迭代发生在第二个数组上，此时第一个参数是数组第一项，第二个参数数组第二项。</li>
 <li>prev需要手动返回，如果没有返回，除了第一次执行时是第一项，后面的prev为undefined。</li>
 </ol>
-<p>#####3.6 总结：</p>
-<table>
+<h5 id="3-6-总结："><a href="#3-6-总结：" class="headerlink" title="3.6 总结："></a>3.6 总结：</h5><table>
 <thead>
 <tr>
 <th>方法名</th>
@@ -752,7 +758,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-Object类型"><span class="nav-text">5.1 Object类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-对象属性访问"><span class="nav-text">1. 对象属性访问</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-Array"><span class="nav-text">5.2 Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义方法"><span class="nav-text">1. 定义方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数组方法"><span class="nav-text">3. 数组方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-检测数组"><span class="nav-text">3.1 检测数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-转换方法"><span class="nav-text">3.2 转换方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-排序方法"><span class="nav-text">3.4 排序方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-操作方法"><span class="nav-text">3.5 操作方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-位置方法"><span class="nav-text">3.6 位置方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-迭代方法"><span class="nav-text">3.7 迭代方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-归并方法"><span class="nav-text">3.5 归并方法</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-Object类型"><span class="nav-text">5.1 Object类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-对象属性访问"><span class="nav-text">1. 对象属性访问</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-Array"><span class="nav-text">5.2 Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-定义方法"><span class="nav-text">1. 定义方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-length属性"><span class="nav-text">2. length属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数组方法"><span class="nav-text">3. 数组方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-1-检测数组"><span class="nav-text">3.1 检测数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-转换方法"><span class="nav-text">3.2 转换方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-4-排序方法"><span class="nav-text">3.4 排序方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-操作方法"><span class="nav-text">3.5 操作方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-位置方法"><span class="nav-text">3.6 位置方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-7-迭代方法"><span class="nav-text">3.7 迭代方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-5-归并方法"><span class="nav-text">3.5 归并方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-6-总结："><span class="nav-text">3.6 总结：</span></a></li></ol></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -771,7 +777,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -797,7 +803,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -837,7 +843,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="/www.bilibili.com" title="www.bilibili.com">哔哩哔哩</a>
+          <a href="http://www.bilibili.com" title="http://www.bilibili.com" rel="noopener" target="_blank">哔哩哔哩</a>
         </li>
       
         <li class="links-of-blogroll-item">
