@@ -417,7 +417,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-17 01:34:25" itemprop="dateModified" datetime="2019-10-17T01:34:25+08:00">2019-10-17</time>
+                <time title="修改时间：2019-10-18 23:05:03" itemprop="dateModified" datetime="2019-10-18T23:05:03+08:00">2019-10-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -458,77 +458,14 @@
       
           <h2 id="1-toString"><a href="#1-toString" class="headerlink" title="1.toString"></a>1.toString</h2><h3 id="1-使用定义"><a href="#1-使用定义" class="headerlink" title="1.使用定义"></a>1.使用定义</h3><p>作用：每个对象都有一个 <code>toString()</code> 方法，当该对象被表示为一个文本值时，或者一个对象以预期的<strong>字符串方式</strong>引用时自动调用。默认情况下，<code>toString()</code> 方法被每个 <code>Object</code> 对象继承。如果此方法在自定义对象中未被覆盖，<code>toString()</code> 返回 “[object <em>type</em>]”，其中 <code>type</code> 是对象的类型。</p>
 <p><strong>注意：</strong>每个对象对会重写toString方法，一般都是重写为输出该对象的<strong>字符串</strong>。</p>
-<p>比如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bol = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> num = <span class="number">5</span>;</span><br><span class="line">bol.toString()	<span class="comment">//"true"</span></span><br><span class="line">num.toString()  <span class="comment">//"5"</span></span><br></pre></td></tr></table></figure>
-
-<p>对函数：</p>
-<p>一样输出函数的字符串！<strong>可见函数的toString也重写了</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">55</span>)&#125;</span><br><span class="line">foo.toString()</span><br><span class="line"><span class="comment">//"function foo ()&#123;</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">55</span>)&#125;<span class="string">"</span></span><br></pre></td></tr></table></figure>
-
-<p>但是<strong>对象(Object)</strong>的toString方法是原方法，比如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">"ggg"</span>&#125;</span><br><span class="line">obj.toString()	<span class="comment">//"[object Object]"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-使用-toString-检测对象类型"><a href="#2-使用-toString-检测对象类型" class="headerlink" title="2.使用 toString() 检测对象类型"></a>2.使用 <code>toString()</code> 检测对象类型</h3><p>可以通过 <code>toString()</code> 来获取每个对象的类型。为了每个对象都能通过 <code>Object.prototype.toString()</code> 来检测，需要以 <code>Function.prototype.call()</code> 或者 <code>Function.prototype.apply()</code> 的形式来调用，传递要检查的对象作为第一个参数，称为 <code>thisArg</code>。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line"></span><br><span class="line">toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>); <span class="comment">// [object Date]</span></span><br><span class="line">toString.call(<span class="keyword">new</span> <span class="built_in">String</span>); <span class="comment">// [object String]</span></span><br><span class="line">toString.call(<span class="built_in">Math</span>); <span class="comment">// [object Math]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Since JavaScript 1.8.5</span></span><br><span class="line">toString.call(<span class="literal">undefined</span>); <span class="comment">// [object Undefined]</span></span><br><span class="line">toString.call(<span class="literal">null</span>); <span class="comment">// [object Null]</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong>输出的值里，type的首字母是<strong>大写</strong>的！！！</p>
-<p>（要使用.call才行，因为只用Object的toString函数是原始的，所以用.call将对象传入，才能执行。）</p>
-<h2 id="2-valueOf"><a href="#2-valueOf" class="headerlink" title="2.valueOf"></a>2.valueOf</h2><h3 id="1-使用定义："><a href="#1-使用定义：" class="headerlink" title="1.使用定义："></a>1.使用定义：</h3><p>JavaScript调用<code>valueOf</code>方法将对象转换为原始值。你很少需要自己调用<code>valueOf</code>方法；当遇到要预期的原始值的对象时，JavaScript会自动调用它。</p>
-<p>默认情况下，<code>valueOf</code>方法由<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" rel="noopener"><code>Object</code></a>后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则<code>valueOf</code>将返回对象本身。</p>
-<p>JavaScript的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的valueOf()方法的返回值和返回值类型均可能不同。</p>
-<pre><code>怎么理解自动调用呢？如下：</code></pre><p>1.首先比较两者的差异：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">arr.toString()	<span class="comment">//"1,2,3,4"</span></span><br><span class="line">arr.valueOf()	<span class="comment">//(4) [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
-
-<p>valueOf就是返回本身的原始值！！！</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bol = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>)</span><br><span class="line"><span class="built_in">console</span>.log(bol)	<span class="comment">// Boolean &#123;true&#125;</span></span><br><span class="line">bol.valueOf()	<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-<p>可以看到，对于用对象定义的值，valueOf会返回数据类型定义的值！！这就是他的作用！</p>
-<p><strong>至于自动调用</strong>，那是当你用new Boolean定义时，代码用到<code>if(bol)</code>的情况，会自动调用ValueOf方法。</p>
-<p><strong>不同类型对象的valueOf()方法的返回值</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left"><strong>对象</strong></th>
-<th align="left"><strong>返回值</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Array</td>
-<td align="left">返回数组对象本身。</td>
-</tr>
-<tr>
-<td align="left">Boolean</td>
-<td align="left">布尔值。</td>
-</tr>
-<tr>
-<td align="left">Date</td>
-<td align="left">存储的时间是从 1970 年 1 月 1 日午夜开始计的毫秒数 UTC。</td>
-</tr>
-<tr>
-<td align="left">Function</td>
-<td align="left">函数本身。</td>
-</tr>
-<tr>
-<td align="left">Number</td>
-<td align="left">数字值。</td>
-</tr>
-<tr>
-<td align="left">Object</td>
-<td align="left">对象本身。这是默认情况。</td>
-</tr>
-<tr>
-<td align="left">String</td>
-<td align="left">字符串值。</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Math 和 Error 对象没有 valueOf 方法</td>
-</tr>
-</tbody></table>
-<h3 id="2-使用valueOf："><a href="#2-使用valueOf：" class="headerlink" title="2.使用valueOf："></a>2.使用valueOf：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Array：返回数组对象本身</span></span><br><span class="line"><span class="keyword">var</span> array = [<span class="string">"ABC"</span>, <span class="literal">true</span>, <span class="number">12</span>, <span class="number">-5</span>];</span><br><span class="line"><span class="built_in">console</span>.log(array.valueOf() === array);   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Date：当前时间距1970年1月1日午夜的毫秒数</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2013</span>, <span class="number">7</span>, <span class="number">18</span>, <span class="number">23</span>, <span class="number">11</span>, <span class="number">59</span>, <span class="number">230</span>);</span><br><span class="line"><span class="built_in">console</span>.log(date.valueOf());   <span class="comment">// 1376838719230</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number：返回数字值</span></span><br><span class="line"><span class="keyword">var</span> num =  <span class="number">15.26540</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.valueOf());   <span class="comment">// 15.2654</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 布尔：返回布尔值true或false</span></span><br><span class="line"><span class="keyword">var</span> bool = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(bool.valueOf() === bool);   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// new一个Boolean对象</span></span><br><span class="line"><span class="keyword">var</span> newBool = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="comment">// valueOf()返回的是true，两者的值相等</span></span><br><span class="line"><span class="built_in">console</span>.log(newBool.valueOf() == newBool);   <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 但是不全等，两者类型不相等，前者是boolean类型，后者是object类型</span></span><br><span class="line"><span class="built_in">console</span>.log(newBool.valueOf() === newBool);   <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Function：返回函数本身</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log( foo.valueOf() === foo );   <span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> foo2 =  <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"x"</span>, <span class="string">"y"</span>, <span class="string">"return x + y;"</span>);</span><br><span class="line"><span class="built_in">console</span>.log( foo2.valueOf() );</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">ƒ anonymous(x,y</span></span><br><span class="line"><span class="comment">) &#123;</span></span><br><span class="line"><span class="comment">return x + y;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Object：返回对象本身</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">name</span>: <span class="string">"张三"</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log( obj.valueOf() === obj );   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// String：返回字符串值</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"http://www.xyz.com"</span>;</span><br><span class="line"><span class="built_in">console</span>.log( str.valueOf() === str );   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// new一个字符串对象</span></span><br><span class="line"><span class="keyword">var</span> str2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"http://www.xyz.com"</span>);</span><br><span class="line"><span class="comment">// 两者的值相等，但不全等，因为类型不同，前者为string类型，后者为object类型</span></span><br><span class="line"><span class="built_in">console</span>.log( str2.valueOf() === str2 );   <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>总结：</strong>对于基本数据类型：string、number、boolean，如果用new定义，valueOf后返回的值（基本数据类型），不全等于 本身（对象）。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/详解toString和valueOf/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
